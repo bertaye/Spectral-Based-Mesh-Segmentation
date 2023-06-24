@@ -6,12 +6,13 @@ Inspired from this paper:
 
 `Mejia, D., Ruiz-Salguero, O., & Cadavid, C. A. (2017). Spectral-based mesh segmentation. International Journal on Interactive Design and Manufacturing (IJIDeM), 11, 503-514.`
 
+A simple mesh segmentation framework relies on the Laplacian Matrix. 
 Scroll down to see results
 
 # How it works?
 If you want to dive deep on the topic you definitely should read the [paper][MyPaper] I uploaded. To summarize, we are creating the Laplacian Matrix of the mesh and 
 then we are finding its second smallest Eigenvalue and corresponding Eigenvector, thanks to amazing [Eigen][EigenLib] and [Spectra][SpectraLib] libraries,we can
-store sparse matrices(Eigen), which results in efficient memory usage, and can calculate only the first two smallest eigenvectors(Spectra) by avoiding spending time on trivial Eigenvectors.
+store sparse matrices (w/Eigen), which results in efficient memory usage, and can calculate only the first two smallest eigenvectors (w/Spectra) by avoiding spending time on trivial Eigenvectors.
 
 #Results
 <p float="center">
