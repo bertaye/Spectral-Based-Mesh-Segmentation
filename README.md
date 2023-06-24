@@ -14,7 +14,7 @@ If you want to dive deep on the topic you definitely should read the [paper][MyP
 then we are finding its second smallest Eigenvalue and corresponding Eigenvector, thanks to amazing [Eigen][EigenLib] and [Spectra][SpectraLib] libraries,we can
 store sparse matrices (w/Eigen), which results in efficient memory usage, and can calculate only the first two smallest eigenvectors (w/Spectra) by avoiding spending time on trivial Eigenvectors.
 
-#Results
+# Results
 <p float="center">
   <img src= "https://github.com/bertaye/Spectral-Based-Mesh-Segmentation/assets/39909689/0d83d03b-05f0-48cb-8278-3cc22f4f75be" width="350" />
   <img src= "https://github.com/bertaye/Spectral-Based-Mesh-Segmentation/assets/39909689/7e803373-78a3-4edd-86f4-0f972793b4ad" width="350" />
