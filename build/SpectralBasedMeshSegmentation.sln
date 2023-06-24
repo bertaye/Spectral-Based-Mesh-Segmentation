@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMakePredefinedTargets", "CMakePredefinedTargets", "{B5C30D67-C615-3276-8638-088E10F00085}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{C31A6ED0-B99D-39B1-8D59-D6EDAD064019}"
+	ProjectSection(ProjectDependencies) = postProject
+		{223033D5-C472-3DE3-A30F-78CFE6BCCF25} = {223033D5-C472-3DE3-A30F-78CFE6BCCF25}
+		{027E42AF-32E0-3284-8E5E-09F0CD3AE224} = {027E42AF-32E0-3284-8E5E-09F0CD3AE224}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpectralBasedMeshSegmentation", "SpectralBasedMeshSegmentation.vcxproj", "{223033D5-C472-3DE3-A30F-78CFE6BCCF25}"
+	ProjectSection(ProjectDependencies) = postProject
+		{027E42AF-32E0-3284-8E5E-09F0CD3AE224} = {027E42AF-32E0-3284-8E5E-09F0CD3AE224}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{027E42AF-32E0-3284-8E5E-09F0CD3AE224}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C31A6ED0-B99D-39B1-8D59-D6EDAD064019}.Debug|x64.ActiveCfg = Debug|x64
+		{C31A6ED0-B99D-39B1-8D59-D6EDAD064019}.Release|x64.ActiveCfg = Release|x64
+		{223033D5-C472-3DE3-A30F-78CFE6BCCF25}.Debug|x64.ActiveCfg = Debug|x64
+		{223033D5-C472-3DE3-A30F-78CFE6BCCF25}.Debug|x64.Build.0 = Debug|x64
+		{223033D5-C472-3DE3-A30F-78CFE6BCCF25}.Release|x64.ActiveCfg = Release|x64
+		{223033D5-C472-3DE3-A30F-78CFE6BCCF25}.Release|x64.Build.0 = Release|x64
+		{027E42AF-32E0-3284-8E5E-09F0CD3AE224}.Debug|x64.ActiveCfg = Debug|x64
+		{027E42AF-32E0-3284-8E5E-09F0CD3AE224}.Debug|x64.Build.0 = Debug|x64
+		{027E42AF-32E0-3284-8E5E-09F0CD3AE224}.Release|x64.ActiveCfg = Release|x64
+		{027E42AF-32E0-3284-8E5E-09F0CD3AE224}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C31A6ED0-B99D-39B1-8D59-D6EDAD064019} = {B5C30D67-C615-3276-8638-088E10F00085}
+		{027E42AF-32E0-3284-8E5E-09F0CD3AE224} = {B5C30D67-C615-3276-8638-088E10F00085}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78E58A84-1788-3B73-AFCF-E8BC93200F2B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

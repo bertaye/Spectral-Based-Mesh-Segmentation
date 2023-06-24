@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{223033D5-C472-3DE3-A30F-78CFE6BCCF25}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>SpectralBasedMeshSegmentation</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\x64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SpectralBasedMeshSegmentation.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SpectralBasedMeshSegmentation</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\x64\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SpectralBasedMeshSegmentation.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SpectralBasedMeshSegmentation</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\GLFW\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\GLEW\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\Spectra\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\GLFW\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\GLEW\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\Spectra\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\GLFW\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\GLEW\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\..\..\External Libs\Spectra\include;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/External Libs/GLFW/lib-vc2022;C:/External Libs/GLFW/lib-vc2022/$(Configuration);C:/External Libs/GLEW/lib/Release/Win32;C:/External Libs/GLEW/lib/Release/Win32/$(Configuration);C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation;C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/x64/Debug/SpectralBasedMeshSegmentation.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/x64/Debug/SpectralBasedMeshSegmentation.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/x64/Release/SpectralBasedMeshSegmentation.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/x64/Release/SpectralBasedMeshSegmentation.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Cpp_Projects/Spectral_Based_Mesh_Segmentation -BC:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build --check-stamp-file C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMake\Default.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMake\DefaultCXX.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMake\Utils.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Cpp_Projects/Spectral_Based_Mesh_Segmentation -BC:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build --check-stamp-file C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMake\Default.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMake\DefaultCXX.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMake\Utils.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Camera.h" />
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Mesh.h" />
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\MeshRenderer.h" />
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Shader.h" />
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\STriangle.h" />
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\SVertex.h" />
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Window.h" />
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\main.cpp" />
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Camera.cpp" />
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp" />
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\MeshRenderer.cpp" />
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Shader.cpp" />
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\ZERO_CHECK.vcxproj">
+      <Project>{027E42AF-32E0-3284-8E5E-09F0CD3AE224}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
