@@ -1,0 +1,20 @@
+﻿  Mesh.cpp
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(160,43): warning C4018: '>': signed/unsigned mismatch
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(194,26): warning C4018: '<': signed/unsigned mismatch
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(194,102): warning C4018: '<': signed/unsigned mismatch
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(221,62): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(229,23): warning C4018: '<': signed/unsigned mismatch
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(233,37): warning C4018: '<': signed/unsigned mismatch
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(262,73): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(294,84): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+  MeshRenderer.cpp
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\MeshRenderer.cpp(96,24): warning C4018: '<': signed/unsigned mismatch
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\MeshRenderer.cpp(96,47): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
+C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp(275): warning C4715: 'Mesh::calculateFiedlerVector': not all control paths return a value
+  Spectral_Based_Mesh_Segmentation.vcxproj -> C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\build\Debug\Spectral_Based_Mesh_Segmentation.exe

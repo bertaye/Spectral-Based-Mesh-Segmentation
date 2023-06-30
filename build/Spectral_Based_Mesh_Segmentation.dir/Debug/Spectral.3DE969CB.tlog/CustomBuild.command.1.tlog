@@ -1,0 +1,10 @@
+^C:\CPP_PROJECTS\SPECTRAL_BASED_MESH_SEGMENTATION\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Cpp_Projects/Spectral_Based_Mesh_Segmentation -BC:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build --check-stamp-file C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

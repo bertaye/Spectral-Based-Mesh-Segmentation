@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\MeshRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Source Files\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\MeshRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\STriangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\SVertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\Header Files\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Cpp_Projects\Spectral_Based_Mesh_Segmentation\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A08CFB6A-77DA-38E5-9ABA-7F21511DBE69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ADB70C19-671C-3A52-B5DF-B03FDC2EF3CE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
