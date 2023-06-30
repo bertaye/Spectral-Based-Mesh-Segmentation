@@ -10,7 +10,9 @@ A simple mesh segmentation framework relies on the Laplacian Matrix.
 Scroll down to see results
 
 # How to use?
-You can either clone the project and use build/Spectral_Based_Mesh_Segmentation.sln by configuring necessary library directions (Eigen, Spectra, GLFW, GLEW) or configure CMakeList.txt with your own paths to mentioned librarires to create a solution file (Note that OpenGL stuff, GLFW and GLEW, is noT mandatory, you can simply extract Mesh.h and Mesh.cpp with other dependencies (SVertex.h and STriangle.h) and use them independently on your own projects but obviously you need Eigen and Spectra too)
+You can either clone the project and use build/Spectral_Based_Mesh_Segmentation.sln by configuring necessary library directions (Eigen, Spectra, GLFW, GLEW) or configure CMakeList.txt with your own paths to mentioned librarires to create a solution file.
+
+(Note that OpenGL stuff, GLFW and GLEW, is noT mandatory, you can simply extract Mesh.h and Mesh.cpp with other dependencies (SVertex.h and STriangle.h) and use them independently on your own projects but obviously you need Eigen and Spectra too)
 
 Once you finished the configuration phase (congrats by the way!); the usage is simple.
 ```c++
