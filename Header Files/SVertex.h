@@ -1,24 +1,10 @@
 #pragma once
 #include <vector>
 #include <optional>
-#include <GLM/glm/vec3.hpp>
+#include <glm/vec3.hpp>
 #include "STriangle.h"
-struct Vertex {
-	int index;
-	glm::vec3 coords;
-	glm::vec3 normals;
-
-	std::vector <std::shared_ptr<Vertex>> adjVerts;
-	std::vector <std::shared_ptr<Triangle>> triList;
-
-	Vertex(int i, glm::vec3 coords, glm::vec3 normals = glm::vec3(0.0f))
-		: index(i), coords(coords), normals(normals) {
-
-	}
-};
-
 /// <summary>
-/// A more Raw Vertex data
+/// A Raw Vertex data
 /// </summary>
 struct RawVertex {
 	int index;

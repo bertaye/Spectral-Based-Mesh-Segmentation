@@ -1,3 +1,3 @@
-C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build/CMakeFiles/SpectralBasedMeshSegmentation.dir
+C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build/CMakeFiles/Spectral_Based_Mesh_Segmentation.dir
 C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build/CMakeFiles/ALL_BUILD.dir
 C:/Cpp_Projects/Spectral_Based_Mesh_Segmentation/build/CMakeFiles/ZERO_CHECK.dir

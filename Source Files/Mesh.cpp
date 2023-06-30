@@ -1,15 +1,15 @@
 #include "Mesh.h"
 #include <queue>
 #include <memory>
-#include <Eigen/Eigenvalues>
-#include <GLM/glm/glm.hpp>
+#include <Eigenvalues>
+#include <glm/glm.hpp>
 #include <Spectra/SymEigsSolver.h>
 #include <Spectra/MatOp/SparseSymMatProd.h>
 #include <Spectra/SymEigsShiftSolver.h>
 #include <Spectra/MatOp/SparseSymShiftSolve.h>
 #include <chrono>
 #include <iostream>
-
+#define PI 3.14159265358979323846
 
 void Mesh::loadOBJ(const char* filename) {
 
@@ -122,6 +122,83 @@ void Mesh::loadOFF(const char* filename) {
     }
 }
 
+void Mesh::segment(int K) {
+    this->createLaplacianMatrix();
+    this->calculateFiedlerVector();
+
+    if (fiedlerVector.has_value()) {
+        int desiredSegmentCount = K;
+        int n = fiedlerVector.value().size();
+        std::vector<float> secondOrderDifferences;
+        std::vector<int> localMaximaIndices;
+        std::vector<float> currentHighests(K);
+        std::vector<std::pair<int, float>> fiedlerVectorized;
+        for (int i = 0; i < fiedlerVector.value().size(); i++) {
+            fiedlerVectorized.push_back(std::make_pair(i, fiedlerVector.value()(i)));
+
+        }
+
+        std::sort(fiedlerVectorized.begin(), fiedlerVectorized.end(),
+            [](const std::pair<int, float>& a, const std::pair<int, float>& b) {
+                return a.second < b.second;
+            });
+
+        //secondOrderDifferences.push_back(-1);
+        for (int i = 1; i < n - 1; i++) {
+            secondOrderDifferences.push_back(std::abs(fiedlerVectorized[i - 1].second - 2 * fiedlerVectorized[i].second + fiedlerVectorized[i + 1].second));
+        }
+
+        gaussianFilter(secondOrderDifferences, secondOrderDifferences.size(), secondOrderDifferences.size() / 70.0f); //was 40
+
+        for (int i = 1; i < n - 3; i++) {
+            if (secondOrderDifferences[i - 1] < secondOrderDifferences[i] && secondOrderDifferences[i] > secondOrderDifferences[i + 1]) {
+                localMaximaIndices.push_back(i);
+            }
+        }
+        while (localMaximaIndices.size() != desiredSegmentCount && localMaximaIndices.size() > 1) {
+
+            if (localMaximaIndices.size() > desiredSegmentCount) {
+                localMaximaIndices.clear();
+                gaussianFilter(secondOrderDifferences, secondOrderDifferences.size(), secondOrderDifferences.size() / 50.0f); //was 40
+
+                for (int i = 1; i < n - 3; i++) {
+                    if (secondOrderDifferences[i - 1] < secondOrderDifferences[i] && secondOrderDifferences[i] > secondOrderDifferences[i + 1]) {
+                        localMaximaIndices.push_back(i);
+                    }
+                }
+            }
+            else {
+                std::cout << "Desired segmentation number can not be reached." << std::endl;
+                break;
+            }
+        }
+
+        std::sort(localMaximaIndices.begin(), localMaximaIndices.end());
+        int maxElIdx = std::max_element(secondOrderDifferences.begin(), secondOrderDifferences.end()) - secondOrderDifferences.begin();
+
+        std::vector<glm::vec3> paintColors;
+        paintColors.push_back(glm::vec3(1.0f, 0.0f, 0.0f));
+        paintColors.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
+        paintColors.push_back(glm::vec3(0.0f, 0.0f, 1.0f));
+        paintColors.push_back(glm::vec3(0.0f, 1.0f, 1.0f));
+        paintColors.push_back(glm::vec3(1.0f, 0.0f, 1.0f));
+        paintColors.push_back(glm::vec3(1.0f, 1.0f, 0.0f));
+        paintColors.push_back(glm::vec3(1.0f, 1.0f, 0.0f));
+        paintColors.push_back(glm::vec3(0.25f, 1.0f, 0.25f));
+
+        std::cout << "Found segmentable regions: " << localMaximaIndices.size() << std::endl;
+
+        int fiedlerSize = fiedlerVectorized.size();
+        int colorIdx = 0;
+        for (int i = 0; i < fiedlerSize; i++) {
+            if (colorIdx < localMaximaIndices.size() && i > localMaximaIndices[colorIdx] && colorIdx < (paintColors.size() - 1)) {
+                colorIdx++;
+            }
+             rawVertices[fiedlerVectorized[i].first].color = paintColors[colorIdx];
+        }
+    }
+}
+
 std::optional<glm::vec3> Mesh::getBestCamPos() {
     glm::vec3 center = (min + max) / 2.0f;
     float maxDimension = glm::distance(min, max);
@@ -133,6 +210,36 @@ glm::vec3 Mesh::getPos() {
     return (min + max) / 2.0f;
 }
 
+void Mesh::gaussianFilter(std::vector<float>& data, int N, float argSigma) {
+    std::vector<float> result(data.size());
+    double sigma = argSigma;
+    std::vector<float> filter(N);
+    float sum = 0;
+
+    for (int i = 0; i < N; ++i) {
+        int x = i - N / 2;
+        filter[i] = std::exp(-(x * x) / (2 * sigma * sigma)) / std::sqrt(2 * PI * sigma * sigma);
+        sum += filter[i];
+    }
+
+    for (int i = 0; i < N; ++i) {
+        filter[i] /= sum;
+    }
+
+    for (int i = 0; i < data.size(); ++i) {
+        float weightedSum = 0;
+        for (int j = 0; j < N; ++j) {
+            int index = i + j - N / 2;
+            if (index >= 0 && index < data.size()) {
+                weightedSum += data[index] * filter[j];
+            }
+        }
+        result[i] = weightedSum;
+    }
+
+    data = result;
+}
+
 void Mesh::AddAdjVertex(std::vector<int>& adjVerts, int v1) {
     if (std::count(adjVerts.begin(), adjVerts.end(), v1) == 0) {
         adjVerts.push_back(v1);
@@ -140,7 +247,10 @@ void Mesh::AddAdjVertex(std::vector<int>& adjVerts, int v1) {
 }
 
 std::optional<Eigen::VectorXf> Mesh::calculateFiedlerVector() {
-
+    if (fiedlerVector.has_value() == true) {
+        std::cout << "Fiedler Vector already calculated." << std::endl;
+        return fiedlerVector;
+    }
     std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
     Spectra::SparseSymMatProd<float> op(laplacianMatrix);
@@ -158,8 +268,8 @@ std::optional<Eigen::VectorXf> Mesh::calculateFiedlerVector() {
         Eigen::VectorXf eigenvalues = eigs.eigenvalues();
         Eigen::MatrixXf eigenvectors = eigs.eigenvectors();
         std::cout << "Eigenvalues: " << eigenvalues << std::endl;
-        
-        return static_cast<Eigen::VectorXf>(eigenvectors.col(0));;
+        fiedlerVector = static_cast<Eigen::VectorXf>(eigenvectors.col(0));
+        return fiedlerVector;
     }
     std::cout << "Fiedler vector calculation failed." << std::endl;
 }
@@ -167,6 +277,11 @@ std::optional<Eigen::VectorXf> Mesh::calculateFiedlerVector() {
 void Mesh::createLaplacianMatrix() {
     if (rawVertices.size() == 0) {
         std::cerr << "Laplacian matrix cannot be created" << std::endl;
+        return;
+    }
+
+    if (laplacianMatrix.size() == rawVertices.size()) {
+        std::cout << "Laplacian matrix already created" << std::endl;
         return;
     }
     laplacianMatrix = Eigen::SparseMatrix<float>(rawVertices.size(), rawVertices.size());

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <GLM/glm/glm.hpp>
+#include <glm/glm.hpp>
 #include "Mesh.h"
 #include "Shader.h"
 #include "Camera.h"
@@ -12,6 +12,7 @@ public:
 
     MeshRenderer(Mesh& mesh, Shader& shader);
     void Render(const Window& window, Camera& camera);
+    void PaintVertices();
     void PaintVertices(const std::vector<glm::vec3>& colors);
     void setShaders(const char* vertexPath, const char* fragmentPath);
     void setPosition(const glm::vec3& position);
@@ -28,7 +29,7 @@ private:
     void PreRender();
     void PostRender();
     void setupMesh();
-    void updateVertexColors(const std::vector<glm::vec3>& colors);
+    void updateVertexColors();
     void setOpenGLPreferences(const Window& window);
     void getUniformLocations();
 

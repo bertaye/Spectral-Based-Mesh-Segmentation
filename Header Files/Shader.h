@@ -2,8 +2,8 @@
 
 #include <GL/glew.h>
 #include <string>
-#include <GLM/glm/gtc/matrix_transform.hpp>
-#include <GLM/glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/glm.hpp>
 class Shader {
 public:
     // Program ID

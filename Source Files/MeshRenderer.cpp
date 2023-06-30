@@ -1,6 +1,6 @@
 #include "MeshRenderer.h"
 #include <GLEW/include/GL/glew.h>
-#include <GLM/glm/gtc/type_ptr.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 
 MeshRenderer::MeshRenderer(Mesh& mesh, Shader& shader):m_Mesh(mesh), m_Shader(shader) {
@@ -88,12 +88,16 @@ void MeshRenderer::Render(const Window& window, Camera& camera) {
 	// Render the mesh
 }
 
+void MeshRenderer::PaintVertices() {
+	updateVertexColors();
+}
+
 void MeshRenderer::PaintVertices(const std::vector<glm::vec3>& colors) {
 	for (int idx = 0; idx < colors.size() && idx < m_Mesh.rawVertices.size(); idx++) {
 		m_Mesh.rawVertices[idx].color = colors[idx];
 	}
 
-	updateVertexColors(colors);
+	updateVertexColors();
 }
 
 void MeshRenderer::setShaders(const char* vertexPath, const char* fragmentPath) {
@@ -140,7 +144,7 @@ void MeshRenderer::setupMesh() {
 	glBindVertexArray(0);
 }
 
-void MeshRenderer::updateVertexColors(const std::vector<glm::vec3>& colors) {
+void MeshRenderer::updateVertexColors() {
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferSubData(GL_ARRAY_BUFFER, 0, m_Mesh.rawVertices.size() * sizeof(RawVertex), m_Mesh.rawVertices.data());

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <GLM/glm/gtc/type_ptr.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 void Shader::Generate(const char* vertexPath, const char* fragmentPath) {
     std::string vertexCode;
